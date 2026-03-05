@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "category": "Ethical Hacking",
+    "titleStart": "Network",
+    "titleHighlight": "Penetration",
+    "titleEnd": "Testing",
+    "description": "Learn the core concepts of network penetration testing, bypassing firewalls, and securing enterprise nodes against zero-day exploits.",
+    "thumbnail": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80",
+    "format": ".PDF",
+    "size": "3.2 MB",
+    "downloadLink": "../Blog/assets/files/PPT_NAME",
+    "downloadFileName": "Penetration_Testing_Guide.pdf",
+    "viewerLink": "https://docs.google.com/gview?url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf&embedded=true"
+  }
+]

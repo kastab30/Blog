@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive Resources - Kastab Garai</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@500;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: { 
+                        accent: '#facc15', 
+                        dark: '#0f172a',
+                        brand: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Modern Premium Dotted Background */
+        .bg-dots-pattern {
+            background-color: #fafafa;
+            background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
+            background-size: 28px 28px;
+        }
+        
+        body.modal-open { overflow: hidden; }
+        
+        /* Smooth Fade In */
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-dots-pattern text-slate-800 font-inter min-h-screen flex flex-col relative overflow-x-hidden selection:bg-accent selection:text-dark">
+
+    <div class="fixed top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 transition-all duration-300">
+        <nav class="max-w-6xl mx-auto bg-white/90 backdrop-blur-xl border border-white/60 shadow-[0_4px_20px_rgb(0,0,0,0.05)] rounded-full px-5 py-3 sm:py-4 flex justify-between items-center">
+            
+            <div class="font-serif italic font-bold text-2xl sm:text-3xl text-dark tracking-tight leading-none">
+                <a href="index.html" class="hover:opacity-80 transition-opacity">Kastab.</a>
+            </div>
+            
+            <a href="index.html" class="group flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-600 bg-slate-50 hover:bg-slate-100 hover:text-dark transition-all px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-slate-200 shadow-sm hover:shadow">
+                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> 
+                <span class="hidden sm:inline">Back to Home</span>
+                <span class="sm:hidden">Back</span>
+            </a>
+            
+        </nav>
+    </div>
+
+    <main class="flex-grow flex flex-col items-center px-4 sm:px-6 lg:px-[5%] pt-32 sm:pt-40 pb-20 relative z-10 w-full">
+        
+        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[90%] max-w-2xl h-[400px] bg-accent/15 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+        <div class="absolute bottom-1/4 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-[90px] pointer-events-none -z-10"></div>
+
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 fade-in w-full">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-5 sm:mb-6">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                <span class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-600">Knowledge Base</span>
+            </div>
+            
+            <h1 class="font-oswald text-4xl sm:text-5xl md:text-6xl uppercase text-dark mb-4 sm:mb-6 leading-[1.1] tracking-tight">
+                Exclusive <br class="sm:hidden"> 
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">Resources</span>
+            </h1>
+            
+            <p class="text-slate-500 text-base sm:text-lg max-w-xl mx-auto font-medium leading-relaxed px-2">
+                Explore and download high-quality presentations on ethical hacking, vulnerability assessments, and modern infrastructure security.
+            </p>
+        </div>
+
+        <div id="ppt-grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 max-w-[1200px] w-full relative z-20 mx-auto">
+            
+            <div id="loading-state" class="col-span-full flex flex-col items-center justify-center text-slate-400 py-20 sm:py-24 bg-white/60 backdrop-blur-md rounded-[2rem] border border-white border-dashed shadow-sm">
+                <div class="relative w-14 h-14 sm:w-16 sm:h-16 mb-5 sm:mb-6">
+                    <i class="fa-solid fa-circle-notch fa-spin text-4xl sm:text-5xl text-slate-300 absolute inset-0"></i>
+                    <i class="fa-solid fa-file-powerpoint text-lg sm:text-xl text-accent absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></i>
+                </div>
+                <p class="font-semibold tracking-wide uppercase text-xs sm:text-sm">Fetching Presentations...</p>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="fullscreen-viewer" class="fixed inset-0 z-[100] bg-dark/95 backdrop-blur-xl hidden flex-col transition-all duration-300 opacity-0">
+        
+        <div class="flex justify-between items-center px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10 bg-black/40">
+            <div class="flex items-center gap-3 sm:gap-4">
+                <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-accent to-orange-500 flex items-center justify-center text-dark shadow-lg">
+                    <i class="fa-solid fa-file-powerpoint text-sm sm:text-base"></i>
+                </div>
+                <div>
+                    <h3 class="font-oswald tracking-widest uppercase text-sm sm:text-base text-white leading-tight">Presentation Preview</h3>
+                    <p class="text-slate-400 text-[10px] sm:text-xs font-medium">Secure Viewer</p>
+                </div>
+            </div>
+            
+            <button id="close-viewer-btn" class="group relative text-slate-400 hover:text-white bg-white/10 hover:bg-red-500 transition-all duration-300 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center overflow-hidden">
+                <i class="fa-solid fa-xmark text-lg sm:text-xl relative z-10"></i>
+            </button>
+        </div>
+        
+        <div class="flex-grow w-full h-full p-2 sm:p-4 md:p-6 pb-4 sm:pb-6 relative flex justify-center items-center">
+            
+            <div class="absolute flex flex-col items-center justify-center text-slate-500 z-0">
+                <i class="fa-solid fa-circle-notch fa-spin text-3xl sm:text-4xl text-accent/50 mb-3 sm:mb-4"></i>
+                <p class="font-medium tracking-widest uppercase text-[10px] sm:text-xs">Loading Document...</p>
+            </div>
+            
+            <iframe id="ppt-iframe" src="" class="w-full h-full max-w-[1400px] rounded-lg sm:rounded-2xl bg-white shadow-2xl relative z-10 border border-white/10" frameborder="0"></iframe>
+        </div>
+        
+    </div>
+
+    <script src="../Blog/assets/js/ppt.js"></script>
+</body>
+</html>

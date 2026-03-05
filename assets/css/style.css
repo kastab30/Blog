@@ -1,11 +1,10 @@
-/* Custom Styles for masking */
+
 
 .mask-gradient {
     mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
-/* Scrollbar Style */
 ::-webkit-scrollbar {
     width: 10px;
 }
