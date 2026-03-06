@@ -30,14 +30,8 @@ async function fetchAndRenderGallery() {
       const delay = (index % 4) * 150; 
 
       htmlContent += `
-        // <div class="gallery-item opacity-0 [transform:rotateY(90deg)] transition-all duration-1000 ease-out group relative overflow-hidden rounded-2xl shadow-md cursor-pointer ${item.autoClass}" style="transition-delay: ${delay}ms;">
-        //   <img src="${item.src}" alt="${item.name}" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-        //   <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-        //     <span class="text-white font-oswald text-xl uppercase tracking-wide translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${item.name}</span>
-        //   </div>
-        // </div>
         <div class="gallery-item opacity-0 [transform:rotateY(90deg)] transition-all duration-1000 ease-out group relative overflow-hidden rounded-2xl shadow-md cursor-pointer ${item.autoClass}" style="transition-delay: ${delay}ms;">
-          <img src="${item.src}" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <img src="${item.src}" alt="${item.name}" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
             <span class="text-white font-oswald text-xl uppercase tracking-wide translate-y-4 group-hover:translate-y-0 transition-transform duration-300">${item.name}</span>
           </div>
