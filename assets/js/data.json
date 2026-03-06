@@ -1,42 +1,32 @@
 [
   {
-    "src": "https://img.freepik.com/free-photo/lavender-field-sunset-near-valensole_268835-3910.jpg?semt=ais_rp_progressive&w=740&q=80",
-    "name": "Workstation"
+    "src": "../assets/images/gallery/IMG1.jpg"
   },
   {
-    "src": "../assets/images/gallery/IMG2.jpg",
-    "name": "Vulnerability Testing"
+    "src": "../assets/images/gallery/IMG2.jpg"
   },
   {
-    "src": "../assets/images/gallery/IMG3.jpg",
-    "name": "Security"
+    "src": "../assets/images/gallery/IMG3.jpg"
   },
   {
-    "src": "../assets/images/gallery/IMG5.jpg",
-    "name": "Servers"
+    "src": "../assets/images/gallery/IMG5.jpg"
   },
   {
-    "src": "../assets/images/gallery/IMG4.jpeg",
-    "name": "Data Flow"
+    "src": "../assets/images/gallery/IMG4.jpeg"
   },
   {
-    "src": "../assets/images/gallery/IMG8.jpg",
-    "name": "Vulnerability Testing"
+    "src": "../assets/images/gallery/IMG8.jpg"
   },
   {
-    "src": "../assets/images/gallery/IMG6.jpg",
-    "name": "Security"
+    "src": "../assets/images/gallery/IMG6.jpg"
   },
   {
-    "src": "../assets/images/gallery/KASTAB.png",
-    "name": "Security"
+    "src": "../assets/images/gallery/KASTAB.png"
   },
   {
-    "src": "../assets/images/gallery/IMG9.jpg",
-    "name": "Security"
+    "src": "../assets/images/gallery/IMG9.jpg"
   },
   {
-    "src": "../assets/images/gallery/IMG7.jpg",
-    "name": "Servers"
+    "src": "../assets/images/gallery/IMG7.jpg"
   }
 ]
