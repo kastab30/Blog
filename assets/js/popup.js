@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (POPUP_CONFIG.enabled && popup && popupContent) {
           try {
           
-            const response = await fetch('../Blog/assets/js/pptData.json');
+            const response = await fetch('../assets/js/pptData.json');
             const pptData = await response.json();
   
             if(pptData && pptData.length > 0) {

@@ -1,16 +1,46 @@
 [
   {
     "id": 1,
-    "category": "Ethical Hacking",
-    "titleStart": "Network",
-    "titleHighlight": "Penetration",
-    "titleEnd": "Testing",
-    "description": "Learn the core concepts of network penetration testing, bypassing firewalls, and securing enterprise nodes against zero-day exploits.",
-    "thumbnail": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=1200&q=80",
+    "category": "Open Source Culture & Community Building",
+    "titleStart": "Hackathon, Innovation, and  Problem Solving",
+    "titleHighlight": "Student Leadership",
+    "titleEnd": "Skill Developmwnt",
+    "description": "Learn about Open Source Culture & Community Building, History of Hackathon, Innovation, and Problem Solving, Student Leadership and Skill Development",
+    "thumbnail": "../assets/thumbnails/JIMS-NOIDA.png",
     "format": ".PDF",
-    "size": "3.2 MB",
-    "downloadLink": "../Blog/assets/files/PPT_NAME",
-    "downloadFileName": "Penetration_Testing_Guide.pdf",
-    "viewerLink": "https://docs.google.com/gview?url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf&embedded=true"
+    "size": "16.8 MB",
+    "downloadLink": "../assets/files/JIMS-NOIDA.pdf",
+    "downloadFileName": "JIMS-NOIDA.pdf",
+    "viewerLink": "../assets/files/JIMS-NOIDA.pdf"
+  },
+
+  {
+    "id": 2,
+    "category": "Open Source Culture & Cybrsecurity Fundamentals",
+    "titleStart": "Open Source Licenses, Monitizing Open Source",
+    "titleHighlight": "Cyber Secuirty Fields",
+    "titleEnd": "& Roadmap",
+    "description": "Learn about OpenSource Licenses and their applications in the context of cybersecurity, Explore various cybersecurity fields and their significance in the digital landscape, Understand the roadmap for a successful career in cybersecurity",
+    "thumbnail": "../assets/thumbnails/Bug2BuildXEliteCoders.jpg",
+    "format": ".PDF",
+    "size": "2.4 MB",
+    "downloadLink": "../assets/files/Bug2BuildXEliteCoders.pdf",
+    "downloadFileName": "OpenSource & CyberSecurity Fundamentals.pdf",
+    "viewerLink": "../assets/files/Bug2BuildXElteCoders.pdf"
+  },
+
+  {
+    "id": 3,
+    "category": "BugBounty & Responsible Disclosure",
+    "titleStart": "History of Bug Bounty,Platforms & Tools, ",
+    "titleHighlight": "Responsible Disclosure",
+    "titleEnd": "TECHNIQUES",
+    "description": "Learn about Bug Bounty and Responsible Disclosure, including the tools and techniques used in the field.",
+    "thumbnail": "../assets/thumbnails/AiGuru.jpg",
+    "format": ".PDF",
+    "size": "2.70 MB",
+    "downloadLink": "../assets/files/AIGuru.pdf",
+    "downloadFileName": "BugBounty & Responsible Disclosure.pdf",
+    "viewerLink": "../assets/files/AIGuru.pdf"
   }
 ]
