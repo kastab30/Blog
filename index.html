@@ -18,11 +18,12 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/madison.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/main.js"></script>
   </head>
-  <body class="w-full min-h-screen bg-dark overflow-x-hidden text-white">
+  <body class="w-full min-h-screen bg-dark overflow-x-hidden text-white theme-madison">
     <div
       class="absolute w-full h-screen bg-hero-glow z-0 pointer-events-none"
     ></div>
@@ -34,14 +35,27 @@
         Kastab Garai.
       </div>
 
-      <div class="flex items-center gap-4 sm:gap-6">
-        <a href="cyberinitiative.html" class="font-semibold text-neutral-800 hover:text-[#0077b5] transition-colors uppercase tracking-wide text-sm hidden sm:block border-b-2 border-transparent hover:border-[#0077b5]">
-          Cyber Initiative
-        </a>
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a
+  href="cyberinitiative.html"
+  class="nav-pill px-5 py-2.5 rounded-full nav-link text-sm font-semibold hidden sm:inline-flex items-center"
+>
+  Cyber Initiative
+</a>
+
+<a
+  href="cyberinitiative.html"
+  class="nav-pill w-10 h-10 rounded-full flex items-center justify-center sm:hidden"
+  aria-label="Cyber Initiative"
+>
+  <i class="fa-solid fa-shield-halved text-lg"></i>
+</a>
+
         <a
           href="https://www.linkedin.com/in/kastab"
           target="_blank"
-          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-[#0077b5] hover:bg-[#0077b5] hover:text-white transition-all duration-300 shadow-sm"
+          rel="noreferrer"
+          class="nav-pill w-10 h-10 rounded-full flex items-center justify-center"
           aria-label="LinkedIn"
         >
           <i class="fa-brands fa-linkedin text-lg"></i>
@@ -50,7 +64,8 @@
         <a
           href="https://wa.me/+916297197002"
           target="_blank"
-          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-green-500 hover:bg-green-500 hover:text-white transition-all duration-300 shadow-sm"
+          rel="noreferrer"
+          class="nav-pill w-10 h-10 rounded-full flex items-center justify-center"
           aria-label="WhatsApp"
         >
           <i class="fa-brands fa-whatsapp text-lg"></i>
@@ -58,7 +73,7 @@
 
         <a
           href="mailto:founder@bug2build.in"
-          class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-[#ea4335] hover:bg-[#ea4335] hover:text-white transition-all duration-300 shadow-sm"
+          class="nav-pill w-10 h-10 rounded-full flex items-center justify-center"
           aria-label="Email"
         >
           <i class="fa-solid fa-envelope text-lg"></i>
@@ -87,10 +102,10 @@
       </div>
 
       <div
-        class="absolute top-[42%] left-[8%] z-10 bg-dark/90 px-5 py-2.5 rounded-full shadow-sm flex items-center gap-2.5 text-sm font-semibold md:top-[45%] md:left-[50px] md:bg-dark"
+        class="absolute top-[42%] left-[8%] z-10 bg-dark/90 px-5 py-2.5 rounded-full shadow-sm flex items-center gap-2.5 text-sm font-semibold md:top-[45%] md:left-[50px] md:bg-dark availability-pill"
       >
         <span
-          class="h-2.5 w-2.5 bg-accent rounded-full ring-4 ring-[#ffecc8]"
+          class="h-2.5 w-2.5 bg-accent rounded-full ring-4 ring-[#ffecc8] availability-dot"
         ></span>
         Available for new opportunities
       </div>
@@ -158,7 +173,7 @@
 
     <section id="blogs" class="px-[5%] py-20 bg-lightbg relative z-10">
       <h2
-        class="font-oswald text-5xl uppercase mb-12 text-accent text-glow-blue border-l-[5px] border-accent pl-5 md:text-5xl text-[2.2rem] animate-on-scroll"
+        class="font-oswald text-5xl uppercase mb-12 text-accent border-l-[5px] border-accent pl-5 md:text-5xl text-[2.2rem] animate-on-scroll"
       >
         Latest Insights
       </h2>
@@ -171,7 +186,7 @@
       <a
         href="https://medium.com/@kastab"
         target="_blank"
-        class="table mx-auto px-10 md:px-12 py-4 text-accent rounded-full font-semibold tracking-wide transition-all duration-300 hover:underline animate-on-scroll"
+        class="m-btn m-btn-ghost table mx-auto px-10 md:px-12 py-4 rounded-full font-semibold tracking-wide transition-all duration-300 animate-on-scroll w-full sm:w-auto"
       >
         View All Posts
       </a>
@@ -195,8 +210,8 @@
       <div class="elfsight-app-d109c700-f672-4824-8007-bf9a2475d557" data-elfsight-app-lazy></div>
     </section>
 
-    <section class="pb-20 bg-dark relative z-10 text-center">
-      <a href="ppt-download.html" class="inline-flex items-center gap-3 bg-black text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-800 transition-all shadow-md hover:-translate-y-1">
+    <section class="pb-20 bg-dark relative z-10 text-center px-[5%]">
+      <a href="ppt-download.html" class="m-btn m-btn-primary w-full sm:w-auto px-8 py-4 text-lg mx-auto mt-6 sm:mt-10">
         <i class="fa-solid fa-file-powerpoint"></i> View & Download PPT
       </a>
     </section>
@@ -264,27 +279,27 @@
     </footer>
 
     <div id="welcome-popup" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-500 px-4">
-      <div class="bg-dark rounded-3xl shadow-2xl w-full max-w-[420px] p-6 sm:p-8 relative transform scale-95 transition-transform duration-500 popup-content flex flex-col items-center text-center border border-white/20">
+      <div class="bg-white/80 rounded-3xl shadow-2xl w-full max-w-[420px] p-6 sm:p-8 relative transform scale-95 transition-transform duration-500 popup-content flex flex-col items-center text-center border border-black/10">
         
-        <button id="close-popup" class="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-slate-100 text-slate-500 hover:bg-red-100 hover:text-red-500 transition-colors z-10">
+        <button id="close-popup" class="absolute top-4 right-4 w-9 h-9 flex items-center justify-center rounded-full bg-black/5 text-black/60 hover:bg-black/10 hover:text-black/90 transition-colors z-10">
           <i class="fa-solid fa-xmark text-xl"></i>
         </button>
         
-        <div class="w-full aspect-video mb-6 rounded-2xl overflow-hidden shadow-md relative group bg-slate-100">
+        <div class="w-full aspect-video mb-6 rounded-2xl overflow-hidden shadow-md relative group bg-black/5">
           <img id="popup-img" src="" alt="Latest PPT" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-0">
-          <div class="absolute top-3 left-3 bg-accent text-dark text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm">
+          <div class="absolute top-3 left-3 bg-accent !text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-sm">
             Latest Upload
           </div>
         </div>
         
-        <h3 id="popup-title" class="font-oswald text-2xl sm:text-3xl font-bold text-slate-900 mb-3 uppercase tracking-wide leading-tight">
+        <h3 id="popup-title" class="font-oswald text-2xl sm:text-3xl font-bold text-black mb-3 uppercase tracking-wide leading-tight">
           Loading...
         </h3>
-        <p id="popup-desc" class="text-slate-500 text-sm mb-8 leading-relaxed px-2 line-clamp-2">
+        <p id="popup-desc" class="text-black/60 text-sm mb-8 leading-relaxed px-2 line-clamp-2">
           Please wait while we fetch the latest presentation details.
         </p>
         
-        <a href="ppt-download.html" class="bg-slate-900 text-white font-semibold px-8 py-4 rounded-full hover:bg-slate-800 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 w-full flex items-center justify-center gap-3 text-lg ">
+        <a href="ppt-download.html" class="popup-cta bg-black text-white font-semibold px-8 py-4 rounded-full hover:bg-neutral-900 hover:-translate-y-1 hover:shadow-xl transition-all duration-300 w-full flex items-center justify-center gap-3 text-lg ">
           <i class="fa-solid fa-eye"></i> View Presentation
         </a>
 

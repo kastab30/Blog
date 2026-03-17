@@ -6,16 +6,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             const closeBtn = document.getElementById('close-viewer-btn');
 
             try {
-                const response = await fetch('../assets/js/pptData.json');
+                const response = await fetch('assets/js/pptData.json');
                 const pptList = await response.json();
 
                 if(loadingState) loadingState.remove();
 
-                pptList.forEach(ppt => {
+                pptList.forEach((ppt, idx) => {
                     const cardHTML = `
-                        <div class="bg-white/90 backdrop-blur-xl rounded-3xl shadow-xl hover:shadow-2xl transition-shadow duration-300 p-5 sm:p-8 flex flex-col h-full border border-white">
+                        <article class="glass-card rounded-3xl transition-shadow duration-300 p-5 sm:p-8 flex flex-col h-full border border-white/10 animate-on-scroll" style="transition-delay:${Math.min(idx * 70, 420)}ms">
                             
-                            <div class="relative group cursor-pointer overflow-hidden rounded-2xl shadow-sm border border-slate-100 aspect-video bg-slate-100 preview-btn mb-5 sm:mb-6 flex-shrink-0" data-viewer="${ppt.viewerLink}">
+                            <div class="relative group cursor-pointer overflow-hidden rounded-2xl shadow-sm border border-white/10 aspect-video bg-black/20 preview-btn mb-5 sm:mb-6 flex-shrink-0" data-viewer="${ppt.viewerLink}">
                                 <img src="${ppt.thumbnail}" alt="${ppt.titleHighlight}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy">
                                 <div class="absolute inset-0 bg-dark/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center backdrop-blur-sm">
                                     <div class="w-12 h-12 sm:w-14 sm:h-14 bg-accent rounded-full flex items-center justify-center text-dark shadow-xl transform group-hover:scale-110 transition-transform duration-300 mb-2">
@@ -26,30 +26,30 @@ document.addEventListener('DOMContentLoaded', async () => {
                             </div>
 
                             <div class="flex flex-col flex-grow">
-                                <span class="inline-block bg-accent/10 text-yellow-600 font-bold px-3 py-1 rounded-full text-[10px] sm:text-xs uppercase tracking-widest border border-accent/20 w-max mb-3">
+                                <span class="inline-block bg-accent/10 text-accent font-bold px-3 py-1 rounded-full text-[10px] sm:text-xs uppercase tracking-widest border border-accent/20 w-max mb-3">
                                     ${ppt.category}
                                 </span>
                                 
-                                <h3 class="font-oswald text-2xl sm:text-3xl uppercase text-dark mb-3 leading-tight line-clamp-2">
+                                <h3 class="font-oswald text-2xl sm:text-3xl uppercase text-white mb-3 leading-tight line-clamp-2">
                                     ${ppt.titleStart} <span class="text-accent">${ppt.titleHighlight}</span> ${ppt.titleEnd}
                                 </h3>
                                 
-                                <p class="text-slate-600 text-sm sm:text-base mb-6 flex-grow line-clamp-3">
+                                <p class="text-gray-300 text-sm sm:text-base mb-6 flex-grow line-clamp-3">
                                     ${ppt.description}
                                 </p>
                                 
-                                <div class="flex flex-wrap items-center gap-2 sm:gap-4 mb-6 border-t border-slate-100 pt-4">
-                                    <span class="text-[10px] sm:text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg flex items-center"><i class="fa-solid fa-file-powerpoint text-red-500 mr-1.5"></i> ${ppt.format}</span>
-                                    <span class="text-[10px] sm:text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg flex items-center"><i class="fa-solid fa-weight-scale text-blue-500 mr-1.5"></i> ${ppt.size}</span>
+                                <div class="flex flex-wrap items-center gap-2 sm:gap-4 mb-6 border-t border-white/10 pt-4">
+                                    <span class="text-[10px] sm:text-xs font-bold text-gray-300 bg-white/5 px-3 py-1.5 rounded-lg flex items-center border border-white/10"><i class="fa-solid fa-file-powerpoint text-red-400 mr-1.5"></i> ${ppt.format}</span>
+                                    <span class="text-[10px] sm:text-xs font-bold text-gray-300 bg-white/5 px-3 py-1.5 rounded-lg flex items-center border border-white/10"><i class="fa-solid fa-weight-scale text-sky-300 mr-1.5"></i> ${ppt.size}</span>
                                 </div>
 
-                                <a href="${ppt.downloadLink}" download="${ppt.downloadFileName}" class="group relative flex items-center justify-center gap-2 bg-dark text-white w-full px-6 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-slate-800 transition-all shadow-lg hover:-translate-y-1 overflow-hidden mt-auto">
+                                <a href="${ppt.downloadLink}" download="${ppt.downloadFileName}" class="group relative flex items-center justify-center gap-2 bg-white/5 text-white w-full px-6 py-3.5 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-white/10 transition-all shadow-lg hover:-translate-y-1 overflow-hidden mt-auto border border-white/10">
                                     <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-[shimmer_1.5s_infinite]"></div>
                                     <i class="fa-solid fa-cloud-arrow-down text-lg sm:text-xl group-hover:animate-bounce"></i>
                                     <span>Download Now</span>
                                 </a>
                             </div>
-                        </div>
+                        </article>
                     `;
                     container.insertAdjacentHTML('beforeend', cardHTML);
                 });
@@ -66,6 +66,18 @@ document.addEventListener('DOMContentLoaded', async () => {
                         document.body.classList.add('modal-open'); 
                     });
                 });
+
+                // Animate-in cards injected after DOMContentLoaded
+                const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+                container.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
 
             } catch (error) {
                 console.error('Error loading PPT Data:', error);

@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (POPUP_CONFIG.enabled && popup && popupContent) {
           try {
           
-            const response = await fetch('../assets/js/pptData.json');
+            const response = await fetch('assets/js/pptData.json');
             const pptData = await response.json();
   
             if(pptData && pptData.length > 0) {
-                const latestPPT = pptData[0];
+                const latestPPT = [...pptData].sort((a, b) => (Number(b.id) || 0) - (Number(a.id) || 0))[0];
                 
                 const imgEl = document.getElementById('popup-img');
                 imgEl.src = latestPPT.thumbnail;

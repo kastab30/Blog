@@ -11,29 +11,61 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/madison.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/main.js"></script>
   </head>
-  <body class="w-full min-h-screen bg-dark text-white overflow-x-hidden">
+  <body class="w-full min-h-screen bg-dark text-white overflow-x-hidden theme-madison">
     
     <!-- NAVBAR (Reused from index.html) -->
     <nav class="flex justify-between items-center py-6 px-[5%] w-full max-w-[1400px] mx-auto relative z-40 transition-all duration-300">
-      <div class="font-serif italic font-bold text-3xl text-white">
-        <a href="index.html">Kastab Garai.</a>
-      </div>
+      <div class="italic font-bold text-3xl text-white"
+     style="font-family:'Playfair Display', serif;">
+  <a href="index.html">Kastab Garai.</a>
+</div>
 
-      <div class="flex items-center gap-4 sm:gap-6">
-        <a href="cyberinitiative.html" class="font-semibold text-accent transition-colors uppercase tracking-wide text-sm hidden sm:block border-b-2 border-accent">
-          Cyber Initiative
-        </a>
-        <a href="https://www.linkedin.com/in/kastab" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-[#0077b5] hover:text-white transition-all duration-300 shadow-sm border border-white/10">
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a
+        href="index.html"
+        class="nav-pill px-5 py-2.5 rounded-full nav-link text-sm font-semibold hidden sm:inline-flex items-center"
+      >
+        Home
+      </a>
+      
+      <a
+        href="index.html"
+        class="nav-pill w-10 h-10 rounded-full flex items-center justify-center sm:hidden"
+        aria-label="Home"
+      >
+        <i class="fa-solid fa-house text-lg"></i>
+      </a>
+
+        <a
+          href="https://www.linkedin.com/in/kastab"
+          target="_blank"
+          rel="noreferrer"
+          class="nav-pill w-10 h-10 rounded-full flex items-center justify-center"
+          aria-label="LinkedIn"
+        >
           <i class="fa-brands fa-linkedin text-lg"></i>
         </a>
-        <a href="https://wa.me/+916297197002" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-green-500 hover:text-white transition-all duration-300 shadow-sm border border-white/10">
+
+        <a
+          href="https://wa.me/+916297197002"
+          target="_blank"
+          rel="noreferrer"
+          class="nav-pill w-10 h-10 rounded-full flex items-center justify-center"
+          aria-label="WhatsApp"
+        >
           <i class="fa-brands fa-whatsapp text-lg"></i>
         </a>
-        <a href="mailto:founder@bug2build.in" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 text-white hover:bg-[#ea4335] hover:text-white transition-all duration-300 shadow-sm border border-white/10">
+
+        <a
+          href="mailto:founder@bug2build.in"
+          class="nav-pill w-10 h-10 rounded-full flex items-center justify-center"
+          aria-label="Email"
+        >
           <i class="fa-solid fa-envelope text-lg"></i>
         </a>
       </div>
@@ -48,11 +80,13 @@
 
       <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-10">
         <div class="mb-8 inline-block relative animate-on-scroll">
-          <i class="fa-solid fa-shield-halved text-6xl text-accent drop-shadow-[0_0_15px_rgba(0,243,255,0.8)]"></i>
+          <div class="m-shield">
+            <i class="fa-solid fa-shield-halved text-4xl"></i>
+          </div>
         </div>
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-wider text-glow-blue animate-on-scroll" style="transition-delay: 200ms;">
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-wider animate-on-scroll" style="transition-delay: 200ms;">
           CYBER CRIME
-          <span class="block text-4xl md:text-5xl lg:text-6xl mt-2 text-white font-bold text-glow-purple">HELP INITIATIVE</span>
+          <span class="block text-4xl md:text-5xl lg:text-6xl mt-2 text-white font-bold">HELP INITIATIVE</span>
         </h1>
         <p class="text-xl md:text-2xl mb-12 text-gray-300 font-sans max-w-2xl mx-auto animate-on-scroll" style="transition-delay: 400ms;">
           Helping victims of cyber crime — free of cost. <br/> Reclaim your digital security and peace of mind with our guided assistance.
@@ -70,7 +104,7 @@
       <div class="max-w-[1400px] mx-auto">
         <div class="text-center mb-16 animate-on-scroll">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="text-accent text-glow-blue">LATEST</span> CYBER CRIME NEWS
+            <span class="text-accent">LATEST</span> CYBER CRIME NEWS
           </h2>
           <div class="h-1 w-24 bg-gradient-to-r from-purple to-accent mx-auto rounded-full"></div>
         </div>
@@ -216,8 +250,8 @@
             </div>
           </div>
           <div class="swiper-pagination mt-10"></div>
-          <div class="swiper-button-next hidden md:flex"></div>
-          <div class="swiper-button-prev hidden md:flex"></div>
+          <div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
@@ -227,7 +261,7 @@
       <div class="max-w-3xl mx-auto px-[5%]">
         <div class="text-center mb-16 animate-on-scroll">
           <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            FREQUENTLY ASKED <span class="text-accent text-glow-blue">QUESTIONS</span>
+            FREQUENTLY ASKED <span class="text-accent">QUESTIONS</span>
           </h2>
         </div>
 

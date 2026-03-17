@@ -23,15 +23,22 @@ tailwind.config = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  const isMadison = document.body.classList.contains('theme-madison');
   const nav = document.querySelector('nav');
   if (nav) {
     nav.classList.add('transition-all', 'duration-300', 'fixed', 'top-0', 'left-1/2', '-translate-x-1/2', 'w-full', 'z-50');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
-        nav.classList.add('bg-dark/90', 'backdrop-blur-md', 'py-3', 'border-b', 'border-accent/20');
+        if (isMadison) {
+          nav.classList.add('bg-white/80', 'backdrop-blur-md', 'py-3', 'border-b', 'border-black/10');
+        } else {
+          nav.classList.add('bg-dark/90', 'backdrop-blur-md', 'py-3', 'border-b', 'border-accent/20');
+        }
         nav.classList.remove('py-6');
       } else {
-        nav.classList.remove('bg-dark/90', 'backdrop-blur-md', 'py-3', 'border-b', 'border-accent/20');
+        nav.classList.remove('bg-white/80', 'border-black/10');
+        nav.classList.remove('bg-dark/90', 'border-accent/20');
+        nav.classList.remove('backdrop-blur-md', 'py-3', 'border-b');
         nav.classList.add('py-6');
       }
     });

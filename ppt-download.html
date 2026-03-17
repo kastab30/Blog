@@ -9,96 +9,89 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Oswald:wght@500;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/madison.css" />
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        oswald: ['Oswald', 'sans-serif'],
-                        inter: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: { 
-                        accent: '#facc15', 
-                        dark: '#0f172a',
-                        brand: '#1e293b'
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Modern Premium Dotted Background */
-        .bg-dots-pattern {
-            background-color: #fafafa;
-            background-image: radial-gradient(#cbd5e1 1.5px, transparent 1.5px);
-            background-size: 28px 28px;
-        }
-        
-        body.modal-open { overflow: hidden; }
-        
-        /* Smooth Fade In */
-        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+    <script src="assets/js/main.js"></script>
 </head>
 
-<body class="bg-dots-pattern text-slate-800 font-inter min-h-screen flex flex-col relative overflow-x-hidden selection:bg-accent selection:text-dark">
+<body class="w-full min-h-screen bg-dark overflow-x-hidden text-white theme-madison">
 
-    <div class="fixed top-0 left-0 w-full z-50 px-4 sm:px-6 py-4 transition-all duration-300">
-        <nav class="max-w-6xl mx-auto bg-white/90 backdrop-blur-xl border border-white/60 shadow-[0_4px_20px_rgb(0,0,0,0.05)] rounded-full px-5 py-3 sm:py-4 flex justify-between items-center">
-            
-            <div class="font-serif italic font-bold text-2xl sm:text-3xl text-dark tracking-tight leading-none">
-                <a href="index.html" class="hover:opacity-80 transition-opacity">Kastab.</a>
+    <div class="absolute w-full h-screen bg-hero-glow z-0 pointer-events-none"></div>
+
+    <nav class="flex justify-between items-center py-6 px-[5%] w-full max-w-[1400px] mx-auto relative z-40">
+      <div class="font-serif italic font-bold text-3xl text-white">
+        <a href="index.html">Kastab Garai.</a>
+      </div>
+
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a
+          href="cyberinitiative.html"
+          class="nav-pill px-5 py-2.5 rounded-full nav-link text-sm font-semibold hidden sm:inline-flex items-center"
+        >
+          Cyber Initiative
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/kastab"
+          target="_blank"
+          rel="noreferrer"
+          class="nav-pill w-10 h-10 rounded-full flex items-center justify-center"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin text-lg"></i>
+        </a>
+
+        <a
+          href="https://wa.me/+916297197002"
+          target="_blank"
+          rel="noreferrer"
+          class="nav-pill w-10 h-10 rounded-full flex items-center justify-center"
+          aria-label="WhatsApp"
+        >
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+        </a>
+
+        <a
+          href="mailto:founder@bug2build.in"
+          class="nav-pill w-10 h-10 rounded-full flex items-center justify-center"
+          aria-label="Email"
+        >
+          <i class="fa-solid fa-envelope text-lg"></i>
+        </a>
+      </div>
+    </nav>
+
+    <main class="relative z-10 w-full px-[5%] pt-10 md:pt-14 pb-20">
+
+        <div class="max-w-[1200px] mx-auto">
+          <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 w-full animate-on-scroll">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 shadow-sm mb-6">
+              <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+              <span class="text-xs font-bold uppercase tracking-widest text-gray-300">Knowledge Base</span>
             </div>
             
-            <a href="index.html" class="group flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-600 bg-slate-50 hover:bg-slate-100 hover:text-dark transition-all px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-slate-200 shadow-sm hover:shadow">
-                <i class="fa-solid fa-arrow-left group-hover:-translate-x-1 transition-transform"></i> 
-                <span class="hidden sm:inline">Back to Home</span>
-                <span class="sm:hidden">Back</span>
-            </a>
-            
-        </nav>
-    </div>
-
-    <main class="flex-grow flex flex-col items-center px-4 sm:px-6 lg:px-[5%] pt-32 sm:pt-40 pb-20 relative z-10 w-full">
-        
-        <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[90%] max-w-2xl h-[400px] bg-accent/15 rounded-full blur-[100px] pointer-events-none -z-10"></div>
-        <div class="absolute bottom-1/4 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-[90px] pointer-events-none -z-10"></div>
-
-        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 fade-in w-full">
-            
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-white border border-slate-200 shadow-sm mb-5 sm:mb-6">
-                <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-                <span class="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-slate-600">Knowledge Base</span>
-            </div>
-            
-            <h1 class="font-oswald text-4xl sm:text-5xl md:text-6xl uppercase text-dark mb-4 sm:mb-6 leading-[1.1] tracking-tight">
-                Exclusive <br class="sm:hidden"> 
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">Resources</span>
+            <h1 class="font-oswald text-4xl sm:text-5xl md:text-6xl uppercase text-white mb-5 leading-[1.05] tracking-tight">
+              Exclusive <span class="text-accent">Resources</span>
             </h1>
             
-            <p class="text-slate-500 text-base sm:text-lg max-w-xl mx-auto font-medium leading-relaxed px-2">
-                Explore and download my presentations covering a wide range of topics, from technology and design to personal growth and creativity. Each presentation is crafted with care, offering valuable insights and actionable takeaways to help you learn, grow, and stay inspired.
+            <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto font-medium leading-relaxed px-2">
+              Explore and download my presentations covering technology, security, and growth—crafted for practical takeaways.
             </p>
-        </div>
+          </div>
 
-        <div id="ppt-grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 max-w-[1200px] w-full relative z-20 mx-auto">
+          <div id="ppt-grid-container" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 w-full relative z-20 mx-auto">
             
-            <div id="loading-state" class="col-span-full flex flex-col items-center justify-center text-slate-400 py-20 sm:py-24 bg-white/60 backdrop-blur-md rounded-[2rem] border border-white border-dashed shadow-sm">
-                <div class="relative w-14 h-14 sm:w-16 sm:h-16 mb-5 sm:mb-6">
-                    <i class="fa-solid fa-circle-notch fa-spin text-4xl sm:text-5xl text-slate-300 absolute inset-0"></i>
-                    <i class="fa-solid fa-file-powerpoint text-lg sm:text-xl text-accent absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></i>
-                </div>
-                <p class="font-semibold tracking-wide uppercase text-xs sm:text-sm">Fetching Presentations...</p>
+            <div id="loading-state" class="col-span-full flex flex-col items-center justify-center text-gray-400 py-20 sm:py-24 glass-card rounded-[2rem] border border-white/10 border-dashed shadow-sm animate-on-scroll">
+              <div class="relative w-14 h-14 sm:w-16 sm:h-16 mb-5 sm:mb-6">
+                <i class="fa-solid fa-circle-notch fa-spin text-4xl sm:text-5xl text-white/20 absolute inset-0"></i>
+                <i class="fa-solid fa-file-powerpoint text-lg sm:text-xl text-accent absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></i>
+              </div>
+              <p class="font-semibold tracking-wide uppercase text-xs sm:text-sm">Fetching Presentations...</p>
             </div>
 
+          </div>
         </div>
     </main>
 
@@ -120,18 +113,18 @@
             </button>
         </div>
         
-        <div class="flex-grow w-full h-full p-2 sm:p-4 md:p-6 pb-4 sm:pb-6 relative flex justify-center items-center">
-            
-            <div class="absolute flex flex-col items-center justify-center text-slate-500 z-0">
+        <div class="flex-grow w-full h-full p-0 sm:p-4 md:p-6 relative flex justify-center items-center overflow-hidden">            <div class="absolute flex flex-col items-center justify-center text-slate-500 z-0">
                 <i class="fa-solid fa-circle-notch fa-spin text-3xl sm:text-4xl text-accent/50 mb-3 sm:mb-4"></i>
                 <p class="font-medium tracking-widest uppercase text-[10px] sm:text-xs">Loading Document...</p>
             </div>
             
-            <iframe id="ppt-iframe" src="" class="w-full h-full max-w-[1400px] rounded-lg sm:rounded-2xl bg-white shadow-2xl relative z-10 border border-white/10" frameborder="0"></iframe>
+            <iframe id="ppt-iframe"
+class="w-full h-full max-w-full sm:max-w-[1400px] rounded-none sm:rounded-2xl bg-white shadow-2xl relative z-10 border border-white/10"
+frameborder="0"></iframe>
         </div>
         
     </div>
 
-    <script src="../assets/js/ppt.js"></script>
+    <script src="assets/js/ppt.js"></script>
 </body>
 </html>
