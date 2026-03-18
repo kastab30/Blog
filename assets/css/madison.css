@@ -252,3 +252,10 @@ body.theme-madison {
   }
 }
 
+/* Additional light theme overrides */
+.theme-madison .border-white\/10 { border-color: var(--m-border) !important; }
+.theme-madison .glass-card-purple { background: var(--m-card) !important; border: 1px solid var(--m-border) !important; }
+.theme-madison .text-gray-500 { color: var(--m-muted-2) !important; }
+.theme-madison .bg-purple\/20 { background: rgba(255, 196, 110, 0.1) !important; }
+
+

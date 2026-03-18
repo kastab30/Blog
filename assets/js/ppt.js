@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const closeBtn = document.getElementById('close-viewer-btn');
 
             try {
-                const response = await fetch('../assets/js/pptData.json');
+                const response = await fetch('../blog/assets/js/pptData.json');
                 const pptList = await response.json();
 
                 if(loadingState) loadingState.remove();

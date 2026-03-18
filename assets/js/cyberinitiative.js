@@ -123,6 +123,25 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Initialize Swiper for Government Initiatives
+  if (typeof Swiper !== 'undefined') {
+    const governmentSwiper = new Swiper('.governmentSwiper', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        reverseDirection: true,
+      },
+      breakpoints: {
+        320: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  }
 });
 
 // FAQ Toggle Function (Exposed globally)
