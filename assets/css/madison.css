@@ -1,0 +1,254 @@
+/* Madison-inspired light theme overrides
+   Applied by adding `theme-madison` to <body>. */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+.theme-madison {
+  --m-bg: #f6f1e8;
+  --m-bg-2: #fbf8f2;
+  --m-text: #111111;
+  --m-muted: rgba(17, 17, 17, 0.72);
+  --m-muted-2: rgba(17, 17, 17, 0.55);
+  --m-card: rgba(255, 255, 255, 0.65);
+  --m-border: rgba(17, 17, 17, 0.08);
+  --m-shadow: 0 20px 45px rgba(17, 17, 17, 0.12);
+  --m-pill: rgba(255, 255, 255, 0.75);
+}
+
+/* Fonts: prefer existing Google fonts already loaded */
+.theme-madison body,
+body.theme-madison {
+  background: var(--m-bg) !important;
+  color: var(--m-text) !important;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+}
+
+.theme-madison h1,
+.theme-madison h2,
+.theme-madison h3,
+.theme-madison h4,
+.theme-madison h5,
+.theme-madison h6,
+.theme-madison .font-oswald {
+  font-family: "Oswald", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
+  letter-spacing: 0.02em;
+}
+
+.theme-madison .font-serif {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+  font-style: italic !important;
+}
+
+/* Utility remaps (override Tailwind classes used throughout pages) */
+.theme-madison .bg-dark { background-color: var(--m-bg) !important; }
+.theme-madison .bg-lightbg { background-color: var(--m-bg-2) !important; }
+.theme-madison .text-white { color: var(--m-text) !important; }
+.theme-madison .text-gray-300 { color: var(--m-muted) !important; }
+.theme-madison .text-gray-400 { color: var(--m-muted-2) !important; }
+.theme-madison .text-gray-500 { color: var(--m-muted-2) !important; }
+.theme-madison .border-accent { border-color: var(--m-text) !important; }
+
+/* Hero background glow -> warm wash like reference */
+.theme-madison .bg-hero-glow {
+  background: radial-gradient(circle at 50% 35%, rgba(255, 196, 110, 0.55) 0%, rgba(246, 241, 232, 0.85) 55%, rgba(246, 241, 232, 1) 75%) !important;
+}
+
+/* Nav styling */
+.theme-madison nav {
+  color: var(--m-text) !important;
+}
+
+.theme-madison .nav-pill {
+  background: var(--m-pill);
+  border: 1px solid var(--m-border);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(17, 17, 17, 0.08);
+}
+
+.theme-madison .nav-link {
+  color: rgba(17, 17, 17, 0.7) !important;
+}
+.theme-madison .nav-link:hover {
+  color: var(--m-text) !important;
+}
+
+.theme-madison .btn-contact {
+  background: #111 !important;
+  color: #fff !important;
+  border: 1px solid rgba(17, 17, 17, 0.9) !important;
+  border-radius: 9999px !important;
+  padding: 0.7rem 1.2rem !important;
+  font-weight: 700 !important;
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease !important;
+  box-shadow: 0 12px 26px rgba(17, 17, 17, 0.22) !important;
+}
+.theme-madison .btn-contact:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 18px 34px rgba(17, 17, 17, 0.28) !important;
+  background: #0b0b0b !important;
+}
+
+/* Cards */
+.theme-madison .glass-card {
+  background: var(--m-card) !important;
+  border: 1px solid var(--m-border) !important;
+  box-shadow: 0 10px 24px rgba(17, 17, 17, 0.08) !important;
+}
+.theme-madison .glass-card:hover {
+  border-color: rgba(17, 17, 17, 0.16) !important;
+  box-shadow: var(--m-shadow) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* Section headings (left border like reference but black) */
+.theme-madison .section-heading {
+  border-left: 5px solid var(--m-text) !important;
+  padding-left: 1.25rem !important;
+}
+
+/* Existing headings in pages use Tailwind border-l-[5px] + pl-5 */
+.theme-madison h2.border-l-\[5px\] {
+  border-left-color: var(--m-text) !important;
+}
+
+/* In light theme, accent should feel like ink (black) */
+.theme-madison .text-accent { color: var(--m-text) !important; }
+.theme-madison .bg-accent { background-color: var(--m-text) !important; }
+
+/* CTA buttons that were neon -> clean black */
+.theme-madison .btn-neon {
+  border-color: rgba(17, 17, 17, 0.9) !important;
+  color: #fff !important;
+  background: #111 !important;
+  border-radius: 9999px !important;
+  letter-spacing: 0.06em !important;
+  box-shadow: 0 14px 30px rgba(17, 17, 17, 0.22) !important;
+}
+.theme-madison .btn-neon::before { display: none !important; }
+.theme-madison .btn-neon:hover {
+  box-shadow: 0 18px 36px rgba(17, 17, 17, 0.28) !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Make the availability pill match reference */
+.theme-madison .availability-pill {
+  background: rgba(255, 255, 255, 0.75) !important;
+  color: rgba(17, 17, 17, 0.78) !important;
+  border: 1px solid rgba(17, 17, 17, 0.08) !important;
+  backdrop-filter: blur(10px);
+}
+.theme-madison .availability-dot {
+  background: #ffb200 !important;
+  box-shadow: 0 0 0 5px rgba(255, 178, 0, 0.25) !important;
+}
+
+/* Tone down heavy blend modes from dark theme */
+.theme-madison .mix-blend-difference { mix-blend-mode: normal !important; }
+
+/* Buttons */
+.theme-madison .m-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 9999px;
+  padding: 0.95rem 1.6rem;
+  font-weight: 700;
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease, border-color 200ms ease, color 200ms ease;
+  will-change: transform;
+}
+.theme-madison .m-btn:active { transform: translateY(0); }
+.theme-madison .m-btn-primary {
+  background: #111;
+  color: #fff !important;
+  border: 1px solid rgba(17, 17, 17, 0.92);
+  box-shadow: 0 12px 26px rgba(17, 17, 17, 0.22);
+}
+.theme-madison .m-btn-primary:hover {
+  background: #0b0b0b;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 34px rgba(17, 17, 17, 0.28);
+}
+.theme-madison .m-btn-ghost {
+  background: rgba(255, 255, 255, 0.75);
+  color: rgba(17, 17, 17, 0.85) !important;
+  border: 1px solid var(--m-border);
+  box-shadow: 0 10px 22px rgba(17, 17, 17, 0.10);
+}
+.theme-madison .m-btn-ghost:hover {
+  color: var(--m-text) !important;
+  border-color: rgba(17, 17, 17, 0.14);
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(17, 17, 17, 0.14);
+}
+
+/* Cyberinitiative shield */
+.theme-madison .m-shield {
+  width: 92px;
+  height: 92px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(17, 17, 17, 0.10);
+  box-shadow: 0 18px 40px rgba(17, 17, 17, 0.12);
+}
+.theme-madison .m-shield i {
+  color: rgba(17, 17, 17, 0.92) !important;
+}
+
+/* Footer */
+.theme-madison footer {
+  background: var(--m-bg-2) !important;
+  color: var(--m-text) !important;
+  border-top: 1px solid var(--m-border) !important;
+}
+.theme-madison footer .border-neutral-800,
+.theme-madison footer .border-white\/10 {
+  border-color: var(--m-border) !important;
+}
+.theme-madison footer a {
+  color: rgba(17, 17, 17, 0.65) !important;
+}
+.theme-madison footer a:hover {
+  color: var(--m-text) !important;
+}
+
+/* Welcome popup */
+.theme-madison #welcome-popup {
+  background: rgba(17, 17, 17, 0.45) !important;
+}
+.theme-madison #welcome-popup .popup-content {
+  background: rgba(255, 255, 255, 0.82) !important;
+  border-color: rgba(17, 17, 17, 0.10) !important;
+  box-shadow: 0 40px 90px rgba(17, 17, 17, 0.25) !important;
+}
+.theme-madison #welcome-popup #close-popup {
+  background: rgba(17, 17, 17, 0.06) !important;
+  color: rgba(17, 17, 17, 0.65) !important;
+}
+.theme-madison #welcome-popup #close-popup:hover {
+  background: rgba(17, 17, 17, 0.10) !important;
+  color: rgba(17, 17, 17, 0.9) !important;
+}
+.theme-madison #welcome-popup #popup-title {
+  color: var(--m-text) !important;
+}
+.theme-madison #welcome-popup #popup-desc {
+  color: rgba(17, 17, 17, 0.65) !important;
+}
+.theme-madison #welcome-popup .popup-cta {
+  background: #111 !important;
+  color: #fff !important;
+}
+.theme-madison #welcome-popup .popup-cta:hover {
+  background: #0b0b0b !important;
+}
+
+/* Respect reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .theme-madison * {
+    scroll-behavior: auto !important;
+  }
+}
+
