@@ -6,12 +6,12 @@
     "titleHighlight": "Student Leadership",
     "titleEnd": "Skill Developmwnt",
     "description": "Learn about Open Source Culture & Community Building, History of Hackathon, Innovation, and Problem Solving, Student Leadership and Skill Development",
-    "thumbnail": "../blog/assets/thumbnails/JIMS-NOIDA.png",
+    "thumbnail": "assets/thumbnails/JIMS-NOIDA.png",
     "format": ".PDF",
     "size": "16.8 MB",
-    "downloadLink": "../blog/assets/files/JIMS-NOIDA.pdf",
+    "downloadLink": "assets/files/JIMS-NOIDA.pdf",
     "downloadFileName": "JIMS-NOIDA.pdf",
-    "viewerLink": "../blog/assets/files/JIMS-NOIDA.pdf"
+    "viewerLink": "assets/files/JIMS-NOIDA.pdf"
   },
 
   {
@@ -21,12 +21,12 @@
     "titleHighlight": "Cyber Secuirty Fields",
     "titleEnd": "& Roadmap",
     "description": "Learn about OpenSource Licenses and their applications in the context of cybersecurity, Explore various cybersecurity fields and their significance in the digital landscape, Understand the roadmap for a successful career in cybersecurity",
-    "thumbnail": "../blog/assets/thumbnails/Bug2BuildXEliteCoders.jpg",
+    "thumbnail": "assets/thumbnails/Bug2BuildXEliteCoders.jpg",
     "format": ".PDF",
     "size": "2.4 MB",
-    "downloadLink": "../blog/assets/files/Bug2BuildXEliteCoders.pdf",
+    "downloadLink": "assets/files/Bug2BuildXEliteCoders.pdf",
     "downloadFileName": "OpenSource & CyberSecurity Fundamentals.pdf",
-    "viewerLink": "../blog/assets/files/Bug2BuildXElteCoders.pdf"
+    "viewerLink": "assets/files/Bug2BuildXElteCoders.pdf"
   },
 
   {
@@ -36,11 +36,11 @@
     "titleHighlight": "Responsible Disclosure",
     "titleEnd": "TECHNIQUES",
     "description": "Learn about Bug Bounty and Responsible Disclosure, including the tools and techniques used in the field.",
-    "thumbnail": "../blog/assets/thumbnails/Bug2BuildXEliteCoders.jpg",
+    "thumbnail": "assets/thumbnails/Bug2BuildXEliteCoders.jpg",
     "format": ".PDF",
     "size": "2.70 MB",
-    "downloadLink": "../blog/assets/files/AIGuru.pdf",
+    "downloadLink": "assets/files/AIGuru.pdf",
     "downloadFileName": "BugBounty & Responsible Disclosure.pdf",
-    "viewerLink": "../blog/assets/files/AIGuru.pdf"
+    "viewerLink": "assets/files/AIGuru.pdf"
   }
 ]
