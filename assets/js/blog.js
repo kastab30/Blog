@@ -19,17 +19,22 @@ async function loadMediumPosts() {
             const imgTag = tempDiv.querySelector("img");
             const imageUrl = imgTag
                 ? imgTag.src
-                : "https://via.placeholder.com/600x400";
+                : "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23f6f1e8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23111111' font-family='Arial' font-size='28'%3EKastab Blog%3C/text%3E%3C/svg%3E";
 
             output += `
   <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 flex flex-col">
     
-    <img src="${imageUrl}" 
+    <img src="${imageUrl}"
+         alt="${post.title}"
+         width="600"
+         height="400"
+         loading="lazy"
+         decoding="async"
          class="w-full h-56 object-cover" />
 
     <div class="p-6 flex flex-col flex-grow">
       <h3 class="text-xl font-semibold mb-3 leading-snug">
-        <a href="${post.link}" target="_blank"
+        <a href="${post.link}" target="_blank" rel="noopener noreferrer"
            class="hover:text-accent transition duration-200">
           ${post.title}
         </a>
@@ -40,7 +45,7 @@ async function loadMediumPosts() {
       </p>
 
       <div class="mt-auto">
-        <a href="${post.link}" target="_blank"
+        <a href="${post.link}" target="_blank" rel="noopener noreferrer"
            class="text-accent font-medium hover:underline">
            View More
         </a>
@@ -52,8 +57,9 @@ async function loadMediumPosts() {
         });
 
         blogGrid.innerHTML = output;
-    } catch (error) {
-        console.error("Error fetching Medium posts:", error);
+    } catch {
+        const blogGrid = document.querySelector("#blogs .grid");
+        if (blogGrid) blogGrid.innerHTML = `<p class="col-span-full text-center text-neutral-600">Latest posts are temporarily unavailable.</p>`;
     }
 }
 

@@ -20,8 +20,8 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/madison.css" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="w-full min-h-screen bg-white overflow-x-hidden text-neutral-900 theme-madison">
     <div
@@ -125,6 +125,10 @@
         <img
           src="assets/images/KASTAB.png"
           alt="Kastab"
+          width="693"
+          height="856"
+          fetchpriority="high"
+          decoding="async"
           class="block w-full h-auto mask-gradient scale-[1.2] origin-bottom md:max-h-[85vh] md:w-auto md:mask-none md:scale-105"
         />
       </div>
@@ -234,8 +238,22 @@
       <h2 class="font-oswald text-5xl uppercase mb-10 text-neutral-900 border-l-[5px] border-accent pl-5 md:text-5xl text-[2.2rem]">
         Connect on LinkedIn
       </h2>
-      <script src="https://elfsightcdn.com/platform.js" async></script>
       <div class="elfsight-app-d109c700-f672-4824-8007-bf9a2475d557" data-elfsight-app-lazy></div>
+      <script>
+        window.addEventListener('load', () => {
+          const loadElfsight = () => {
+            const script = document.createElement('script');
+            script.src = 'https://elfsightcdn.com/platform.js';
+            script.async = true;
+            document.body.appendChild(script);
+          };
+          if ('requestIdleCallback' in window) {
+            requestIdleCallback(loadElfsight, { timeout: 2500 });
+          } else {
+            setTimeout(loadElfsight, 1200);
+          }
+        });
+      </script>
     </section>
 
    <section class="pb-24 bg-white relative z-10 text-center">
@@ -405,7 +423,11 @@ transition-opacity duration-500 px-4">
 
       <img
         id="popup-img"
-        src=""
+        alt="Latest presentation preview"
+        width="960"
+        height="540"
+        loading="lazy"
+        decoding="async"
         class="w-full h-full object-cover
         transition duration-700
         opacity-0
@@ -457,9 +479,8 @@ transition-opacity duration-500 px-4">
 
 </div>
 
-    <!-- <script src="assets/js/popup.js"></script> -->
-    <script src="assets/js/popup.js"></script>
-    <script src="assets/js/blog.js"></script>
-    <script src="assets/js/gallery.js"></script>
+    <script src="assets/js/popup.js" defer></script>
+    <script src="assets/js/blog.js" defer></script>
+    <script src="assets/js/gallery.js" defer></script>
   </body>
 </html>

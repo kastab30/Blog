@@ -4,9 +4,9 @@
     "category": "Open Source Culture & Community Building",
     "titleStart": "Hackathon, Innovation, and  Problem Solving",
     "titleHighlight": "Student Leadership",
-    "titleEnd": "Skill Developmwnt",
+    "titleEnd": "Skill Development",
     "description": "Learn about Open Source Culture & Community Building, History of Hackathon, Innovation, and Problem Solving, Student Leadership and Skill Development",
-    "thumbnail": "assets/thumbnails/JIMS-NOIDA.png",
+    "thumbnail": "assets/thumbnails/optimized/JIMS-NOIDA-960.jpg",
     "format": ".PDF",
     "size": "16.8 MB",
     "downloadLink": "assets/files/JIMS-NOIDA.pdf",
@@ -16,17 +16,17 @@
 
   {
     "id": 2,
-    "category": "Open Source Culture & Cybrsecurity Fundamentals",
-    "titleStart": "Open Source Licenses, Monitizing Open Source",
-    "titleHighlight": "Cyber Secuirty Fields",
+    "category": "Open Source Culture & Cybersecurity Fundamentals",
+    "titleStart": "Open Source Licenses, Monetizing Open Source",
+    "titleHighlight": "Cyber Security Fields",
     "titleEnd": "& Roadmap",
     "description": "Learn about OpenSource Licenses and their applications in the context of cybersecurity, Explore various cybersecurity fields and their significance in the digital landscape, Understand the roadmap for a successful career in cybersecurity",
-    "thumbnail": "assets/thumbnails/Bug2BuildXEliteCoders.jpg",
+    "thumbnail": "assets/thumbnails/optimized/Bug2BuildXEliteCoders-960.jpg",
     "format": ".PDF",
     "size": "2.4 MB",
     "downloadLink": "assets/files/Bug2BuildXEliteCoders.pdf",
     "downloadFileName": "OpenSource & CyberSecurity Fundamentals.pdf",
-    "viewerLink": "assets/files/Bug2BuildXElteCoders.pdf"
+    "viewerLink": "assets/files/Bug2BuildXEliteCoders.pdf"
   },
 
   {
@@ -36,7 +36,7 @@
     "titleHighlight": "Responsible Disclosure",
     "titleEnd": "TECHNIQUES",
     "description": "Learn about Bug Bounty and Responsible Disclosure, including the tools and techniques used in the field.",
-    "thumbnail": "assets/thumbnails/Bug2BuildXEliteCoders.jpg",
+    "thumbnail": "assets/thumbnails/optimized/AiGuru-960.jpg",
     "format": ".PDF",
     "size": "2.70 MB",
     "downloadLink": "assets/files/AIGuru.pdf",

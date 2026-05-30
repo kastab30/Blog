@@ -18,13 +18,19 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const latestPPT = pptData[0];
                 
                 const imgEl = document.getElementById('popup-img');
-                imgEl.src = latestPPT.thumbnail;
-                imgEl.onload = () => imgEl.classList.remove('opacity-0'); 
+                if (imgEl) {
+                  imgEl.loading = 'lazy';
+                  imgEl.decoding = 'async';
+                  imgEl.width = 960;
+                  imgEl.height = 540;
+                  imgEl.src = latestPPT.thumbnail;
+                  imgEl.onload = () => imgEl.classList.remove('opacity-0');
+                }
                 document.getElementById('popup-title').innerHTML = `${latestPPT.titleStart} <br> <span class="text-accent">${latestPPT.titleHighlight}</span>`;
                 document.getElementById('popup-desc').innerText = latestPPT.description;
             }
-          } catch (error) {
-            console.error("Failed to load latest PPT for popup:", error);
+          } catch {
+            document.getElementById('popup-desc').innerText = 'Open the presentation library to view the latest resources.';
           }
 
           setTimeout(() => {

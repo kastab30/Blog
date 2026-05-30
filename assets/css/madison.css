@@ -1,7 +1,3 @@
-/* Madison-inspired light theme overrides
-   Applied by adding `theme-madison` to <body>. */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
-
 .theme-madison {
   --m-bg: #f6f1e8;
   --m-bg-2: #fbf8f2;

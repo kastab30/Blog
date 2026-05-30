@@ -1,38 +1,110 @@
 [
   {
-    "src": "../assets/images/gallery/IMG1.jpg"
+    "name": "Gallery 1",
+    "src": "assets/images/gallery/IMG1.jpg",
+    "preview": "assets/images/gallery/optimized/IMG1-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG1-640.jpg 640w, assets/images/gallery/optimized/IMG1-960.jpg 960w",
+    "width": 3024,
+    "height": 4032,
+    "autoClass": "md:row-span-2"
   },
   {
-    "src": "../assets/images/gallery/IMG2.jpg"
+    "name": "Gallery 2",
+    "src": "assets/images/gallery/IMG2.jpg",
+    "preview": "assets/images/gallery/optimized/IMG2-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG2-640.jpg 640w, assets/images/gallery/optimized/IMG2-960.jpg 960w",
+    "width": 3592,
+    "height": 1821,
+    "autoClass": "md:col-span-2"
   },
   {
-    "src": "../assets/images/gallery/IMG3.jpg"
+    "name": "Gallery 3",
+    "src": "assets/images/gallery/IMG3.jpg",
+    "preview": "assets/images/gallery/optimized/IMG3-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG3-640.jpg 640w, assets/images/gallery/optimized/IMG3-960.jpg 960w",
+    "width": 960,
+    "height": 1144,
+    "autoClass": ""
   },
   {
-    "src": "../assets/images/gallery/IMG5.jpg"
+    "name": "Gallery 5",
+    "src": "assets/images/gallery/IMG5.jpg",
+    "preview": "assets/images/gallery/optimized/IMG5-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG5-640.jpg 640w, assets/images/gallery/optimized/IMG5-960.jpg 960w",
+    "width": 4000,
+    "height": 3000,
+    "autoClass": "md:col-span-2"
   },
   {
-    "src": "../assets/images/gallery/IMG4.jpeg"
+    "name": "Gallery 4",
+    "src": "assets/images/gallery/IMG4.jpeg",
+    "preview": "assets/images/gallery/optimized/IMG4-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG4-640.jpg 640w, assets/images/gallery/optimized/IMG4-960.jpg 960w",
+    "width": 960,
+    "height": 1280,
+    "autoClass": "md:row-span-2"
   },
   {
-    "src": "../assets/images/gallery/IMG8.jpg"
+    "name": "Gallery 8",
+    "src": "assets/images/gallery/IMG8.jpg",
+    "preview": "assets/images/gallery/optimized/IMG8-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG8-640.jpg 640w, assets/images/gallery/optimized/IMG8-960.jpg 960w",
+    "width": 4096,
+    "height": 3251,
+    "autoClass": ""
   },
   {
-    "src": "../assets/images/gallery/IMG6.jpg"
+    "name": "Gallery 6",
+    "src": "assets/images/gallery/IMG6.jpg",
+    "preview": "assets/images/gallery/optimized/IMG6-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG6-640.jpg 640w, assets/images/gallery/optimized/IMG6-960.jpg 960w",
+    "width": 3123,
+    "height": 3229,
+    "autoClass": ""
   },
   {
-    "src": "../assets/images/gallery/IMG13.jpg"
+    "name": "Gallery 13",
+    "src": "assets/images/gallery/IMG13.jpg",
+    "preview": "assets/images/gallery/optimized/IMG13-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG13-640.jpg 640w, assets/images/gallery/optimized/IMG13-960.jpg 960w",
+    "width": 3072,
+    "height": 2538,
+    "autoClass": ""
   },
   {
-    "src": "../assets/images/gallery/IMG10.jpg"
+    "name": "Gallery 10",
+    "src": "assets/images/gallery/IMG10.jpg",
+    "preview": "assets/images/gallery/optimized/IMG10-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG10-640.jpg 640w, assets/images/gallery/optimized/IMG10-960.jpg 960w",
+    "width": 4096,
+    "height": 3072,
+    "autoClass": "md:col-span-2"
   },
   {
-    "src": "../assets/images/gallery/IMG9.jpg"
+    "name": "Gallery 9",
+    "src": "assets/images/gallery/IMG9.jpg",
+    "preview": "assets/images/gallery/optimized/IMG9-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG9-640.jpg 640w, assets/images/gallery/optimized/IMG9-960.jpg 960w",
+    "width": 8000,
+    "height": 5121,
+    "autoClass": "md:col-span-2"
   },
   {
-    "src": "../assets/images/gallery/IMG12.jpg"
+    "name": "Gallery 12",
+    "src": "assets/images/gallery/IMG12.jpg",
+    "preview": "assets/images/gallery/optimized/IMG12-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG12-640.jpg 640w, assets/images/gallery/optimized/IMG12-960.jpg 960w",
+    "width": 3072,
+    "height": 1630,
+    "autoClass": "md:col-span-2"
   },
   {
-    "src": "../assets/images/gallery/IMG7.jpg"
+    "name": "Gallery 7",
+    "src": "assets/images/gallery/IMG7.jpg",
+    "preview": "assets/images/gallery/optimized/IMG7-640.jpg",
+    "srcset": "assets/images/gallery/optimized/IMG7-640.jpg 640w, assets/images/gallery/optimized/IMG7-960.jpg 960w",
+    "width": 4096,
+    "height": 3072,
+    "autoClass": "md:col-span-2"
   }
 ]
