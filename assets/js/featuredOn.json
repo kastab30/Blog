@@ -1,0 +1,20 @@
+[
+  {
+    "name": "India Book of Records",
+    "logo": "assets/images/featured/IndiaBook.jpg",
+    "alt": "India Book of Records Achiever",
+    "link": "https://indiabookofrecords.in/kastab-garai-ibr-achiever/"
+  },
+  {
+    "name": "Daily Hunt",
+    "logo": "assets/images/featured/DailyHunt.png",
+    "alt": "Daily Hunt Feature",
+    "link": "https://dhunt.in/14yc9h"
+  },
+  {
+    "name": "The Lucknow Tribune",
+    "logo": "assets/images/featured/LucknowTribune.png",
+    "alt": "The Lucknow Tribune Feature",
+    "link": "https://thelucknowtribune.org/hackwithsmile-2026-concludes-successfully-strengthens-cybersecurity-community-in-lucknow/"
+  }
+]

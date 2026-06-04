@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="80" viewBox="0 0 220 80" role="img" aria-labelledby="title">
+  <title id="title">Media logo placeholder 2</title>
+  <rect width="220" height="80" rx="14" fill="#ffffff"/>
+  <circle cx="44" cy="40" r="20" fill="#111111"/>
+  <path d="M35 31h18v5H41v2.5h10.8v4.8H41V49h-6V31Zm40 21V28h7v24h-7Zm17 0V28h7v17.9h11.8V52H92Zm29 0V28h18.8v5.8H128v3.4h10.7v5.4H128v3.6h12.2V52H121Zm30.4 0V28h6.6l10.1 12.5V28h6.9v24h-6.1l-10.6-13.1V52h-6.9Z" fill="#111111"/>
+</svg>
